@@ -1,0 +1,17 @@
+package rst.kinematics;
+
+option java_outer_classname = "JointPositionStateType";
+
+import "rst/kinematics/JointState.proto";
+
+/**
+ * Joint position data of a robot seen from its head.
+ * @todo "What does that mean?"
+ *
+ * @author TODO
+ */
+message JointPositionState {
+
+    repeated JointState joints = 1;
+
+}

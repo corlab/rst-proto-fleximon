@@ -1,0 +1,19 @@
+package rst.vision;
+
+import "rst/vision/CameraMatrix3x4.proto";
+
+option java_outer_classname = "CalibrationMatricesType";
+
+/**
+ * A pair of 2D Points.
+ * @todo "comment seems wrong"
+ *
+ * @author Johannes Wienke <jwienke@techfak.uni-bielefeld.de>
+ */
+message CalibrationMatrices {
+
+    required CameraMatrix3x4 left = 1;
+
+    required CameraMatrix3x4 right = 2;
+
+}

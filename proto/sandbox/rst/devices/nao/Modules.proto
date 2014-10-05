@@ -1,0 +1,21 @@
+package rst.devices.nao;
+
+option java_outer_classname = "ModulesType";
+
+/**
+ * @todo: think about merging this with types from cbse package
+ *        as a module could be some kind of component
+ */
+message Modules {
+
+    repeated Module modules = 1;
+
+    repeated Module framemanager_modules = 2;
+
+}
+
+message Module {
+
+    required string name = 1;
+
+}

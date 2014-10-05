@@ -1,0 +1,33 @@
+package rst.cbse;
+
+import "rst/cbse/ComponentState.proto";
+import "rst/cbse/InputPort.proto";
+import "rst/cbse/OutputPort.proto";
+import "rst/timing/Duration.proto";
+import "rst/timing/Frequency.proto";
+
+option java_outer_classname = "ComponentInfoType";
+
+/**
+ * Holds information about a component.
+ *
+ * @todo "Should be split up in static (structure) and dynamic part
+ * (timing, state, buffer filling levels, ...)"
+ *
+ * @author Arne Nordmann <anordman@techfak.uni-bielefeld.de>
+ */
+message ComponentInfo {
+
+    required string id = 1;
+
+    required ComponentState lifecycle = 2;
+
+    required InputPort inputs = 3;
+
+    required OutputPort outputs = 4;
+
+    optional timing.Duration uptime = 5;
+
+    optional timing.Frequency freqency = 6;
+
+}

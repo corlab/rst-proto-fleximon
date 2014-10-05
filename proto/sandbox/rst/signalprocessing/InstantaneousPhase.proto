@@ -1,0 +1,19 @@
+package rst.signalprocessing;
+
+option java_outer_classname = "InstantaneousPhaseType";
+
+/**
+ * A message representing an instantaneous phase, the time-variant
+ * angle or its modulo value of a wave.
+ *
+ * @author Arne Nordmann <anordman@techfak.uni-bielefeld.de>
+ */
+message InstantaneousPhase {
+
+    /**
+     * Time-variant angle or its modulo value of a wave.
+     */
+    // @unit(radian)
+    required float phase = 1;
+
+}

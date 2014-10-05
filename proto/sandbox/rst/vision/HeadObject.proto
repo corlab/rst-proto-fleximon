@@ -1,0 +1,80 @@
+package rst.vision;
+
+import "rst/geometry/BoundingBox.proto";
+import "rst/tracking/TrackingInfo.proto";
+import "rst/vision/Face.proto";
+import "rst/math/Vec3DFloat.proto";
+import "rst/classification/ClassificationResult.proto";
+
+option java_outer_classname = "HeadObjectType";
+
+/**
+ * Focus on image coordinate systems (vision-based).
+ *
+ * A head object represented by its ID, location in the image and head
+ * rotation angles.
+ *
+ * id    : head object identifier
+ * @todo "what does the above mean?"
+ *
+ * @author Vasil Khalidov <vasil.khalidov@idiap.ch>
+ */
+message HeadObject {
+
+    optional tracking.TrackingInfo tracking_info = 1;
+
+    /**
+     * Head location in the input image.
+     */
+    optional geometry.BoundingBox region = 2;
+
+    optional math.Vec3DFloat position = 3;
+
+    /**
+     * @ref .x -> pan
+     *
+     *   Pan head rotation angle. Positive: person looks to her or his
+     *   right side.
+     *
+     * @ref .y -> tilt
+     *
+     *   Tilt head rotation angle. Positive: person looks up.
+     *
+     * @ref .z -> roll
+     *
+     *   Roll head rotation angle. Positive: person's head rolled to
+     *   his right shoulder.
+     */
+    optional math.Vec3DFloat pose = 4;
+
+    message LabeledFace {
+
+        required bytes label = 1;
+
+        required vision.Face face = 2;
+
+    }
+
+    /**
+     * @todo "semantic description"
+     *
+     * Repeated field because in cases of stereo processing there
+     * might be faces from both cameras.
+     */
+    repeated LabeledFace faces = 6;
+
+    optional float speaking_probability = 7;
+
+    /**
+     * String description of the visual focus of attention of this
+     * head.
+     */
+    optional bytes vfoa_target = 8;
+
+    optional classification.ClassificationResult identity = 9;
+
+    optional classification.ClassificationResult gender = 10;
+
+    optional classification.ClassificationResult age = 11;
+
+}

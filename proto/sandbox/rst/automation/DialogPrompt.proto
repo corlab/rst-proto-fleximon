@@ -1,0 +1,67 @@
+package rst.automation;
+
+option java_outer_classname = "DialogPromptType";
+
+/**
+ * Delivers all necessary Information to show a Dialog Window for User interaction
+ *
+ * @author Hendrik Oestreich <hoestreich@techfak.uni-bielefeld.de>
+ */
+message DialogPrompt {
+
+    /**
+     * The message level defines which kind of dialog should be shown in the client
+     */
+    enum MsgLvl {
+        UNDEFINED = 0;
+        INFO = 1;
+        CONFIRM = 2;
+        QUESTION = 3;
+    }
+
+    /**
+     * The target defines which component is allowed to answer the dialog
+     */
+    enum Target {
+        UUID = 0;
+        ALL = 1;
+    }
+
+    /**
+     * The ID of the user task, which invoked the DialogPrompt
+     */
+    required int32 task_id = 1;
+
+    /**
+     * Simple name for the Dialog
+     */
+    required string name = 2;
+
+    /**
+     * The message level
+     */
+    required MsgLvl msg_lvl = 3;
+
+    /**
+     * The target
+     */
+    required Target target = 4;
+
+    /**
+     * If the enum Target is set to UUID this integer should contain the UUID
+     * of the component that is allowed to answer the dialog
+     */
+    optional int32 target_uuid = 5;
+
+    /**
+     * The text that should be shown in the dialog
+     */
+    required string text = 6;
+
+    /**
+     * Can be used for connection management:
+     * The dialog has to reply on the given scope if it is available
+     */
+    optional string reply_scope = 7;
+
+}

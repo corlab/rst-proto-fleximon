@@ -1,0 +1,184 @@
+package rst.monitoring;
+
+option java_outer_classname = "ProcessCuesType";
+
+/**
+ * Monitoring-relevant cues about a system process.
+ *
+ * @author Johannes Wienke <jwienke@techfak.uni-bielefeld.de>
+ * @todo "this message requires serious abstraction once the
+ *       functionality of all cue providers is understood. Do not move
+ *       it to stable!"
+ */
+message ProcessCues {
+
+    /**
+     * PID of the program.
+     */
+    required uint32 pid = 1000;
+
+    /**
+     * Name of the program (argv[0]).
+     */
+    optional bytes name = 1001;
+
+    /**
+     * Name of the host the program is running on.
+     */
+    optional bytes host_name = 1002;
+
+    /**
+     * The complete command line of the program (might include the name, too).
+     */
+    optional string command_line = 1003;
+
+    /**
+     * A unique id that identifies the exact version of the program that was
+     * monitored. One source for this kind of information might be the build id
+     * from the ELF format on Linux.
+     */
+    optional bytes unique_id = 10004;
+
+    /**
+     * Cues from a single source.
+     */
+    message Cues {
+
+        /**
+         * Short description of the cue source.
+         */
+        required bytes source = 1000;
+
+        /**
+         * Amount of time that this process has been scheduled in user
+         * mode, [usec], for taskstats this is ac_utime.
+         */
+        optional uint64 utime = 1;
+
+        /**
+         * Amount of time that this process has been scheduled in
+         * kernel mode, [usec], for taskstats this is ac_stime
+         */
+        optional uint64 stime = 2;
+
+        /**
+         * Number of threads in this process.
+         */
+        optional int64 num_threads = 3;
+
+        /**
+         * Virtual memory size in bytes.
+         */
+        optional uint64 vsize = 4;
+
+        /**
+         * Resident Set Size: number of pages the process has in real
+         * memory.
+         */
+        optional int64 rss = 5;
+
+        /**
+         * Wall-clock time used by this process since
+         * start. [nanoseconds]
+         */
+        optional uint64 wall_time = 6;
+
+        /**
+         * Processing time used by this process since start.
+         * [nanoseconds]
+         */
+        optional uint64 virtual_time = 7;
+
+        /**
+         * Elapsed time (from taskstats). [usec]
+         */
+        optional uint64 etime = 8;
+
+        optional uint64 utime_scaled = 9;
+
+        optional uint64 stime_scaled = 10;
+
+        optional uint64 wall_time_scaled = 11;
+
+        /**
+         * Start time of the process or thread. [usec] since unix epoche.
+         */
+        optional uint64 start_time = 12;
+
+        // IO stuff
+
+        /**
+         * The number of bytes which this task has caused to be read
+         * from storage. This is simply the sum of bytes which this
+         * process passed to read() and pread(). It includes things
+         * like tty IO and it is unaffected by whether or not actual
+         * physical disk IO was required
+         */
+        optional uint64 rchar = 30;
+
+        /**
+         * The number of bytes which this task has caused, or shall
+         * cause to be written to disk.
+         *
+         * Similar caveats apply here as with rchar.
+         */
+        optional uint64 wchar = 31;
+
+        /**
+         * Attempt to count the number of bytes which this process
+         * really did cause to be fetched from the storage layer. Done
+         * at the submit_bio() level, so it is accurate for
+         * block-backed filesystems.
+         */
+        optional uint64 read_bytes = 32;
+
+        /**
+         * Attempt to count the number of bytes which this process
+         * caused to be sent to the storage layer. This is done at
+         * page-dirtying time.
+         */
+        optional uint64 write_bytes = 33;
+
+        /**
+         * The number of open file descriptors including everything like
+         * sockets and pipes.
+         */
+        optional uint32 open_fds = 50;
+
+        /**
+         * The number of open files (real files, not sockets etc) a process
+         * possesses.
+         */
+        optional uint32 open_files = 51;
+
+        /**
+         * The number of open network connections. This includes TCP/IP and UDP
+         * traffic on IPv4 and IPv6.
+         */
+        optional uint32 open_connections = 60;
+
+    }
+
+    /**
+     * Cues from different sources.
+     */
+    repeated Cues cues = 1;
+
+    message Thread {
+        optional bytes name = 1;
+        optional uint32 tid = 2;
+        repeated Cues cues = 10;
+    }
+
+    /**
+     * Thread-specific performance data of requested.
+     */
+    repeated Thread threads = 10;
+
+    /**
+     * Child processes of this process and their data. The hierarchy of
+     * processes is linearized in this field.
+     */
+    repeated ProcessCues children = 20;
+
+}

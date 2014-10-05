@@ -1,0 +1,24 @@
+package rst.devices.nao;
+
+option java_outer_classname = "NaoTemperaturesType";
+
+
+message NaoTemperatures {
+
+    // @unit(degree-kelvin?)
+    optional float board = 1;
+
+    // @unit(degree-kelvin?)
+    optional float head = 2;
+
+    repeated JointTemperature joints = 3;
+}
+
+message JointTemperature {
+
+    required string name = 1;
+
+    // @unit(degree-kelvin?)
+    required float temperature = 2;
+
+}
