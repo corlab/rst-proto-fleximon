@@ -8,6 +8,7 @@ option java_outer_classname = "StampingType";
  */
 message Stamping {
 
-    optional float position_work = 1;
+    required float position_work = 1;
+    required float StandardSpeed = 2;
 
 }
