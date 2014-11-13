@@ -6,7 +6,7 @@ option java_outer_classname = "ConditionMonitoring";
  * author Klaus Neumann
  * author Tim Schuermann  <tschuerm@techfak.uni-bielefeld.de>
  */
-message ConditionMonitoring {
+message CMonitoring {
 
 	/**
 	 * Contains the ID of the specific RSB-Package
