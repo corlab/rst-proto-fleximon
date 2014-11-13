@@ -1,0 +1,52 @@
+package rst.automation;
+
+option java_outer_classname = "ConditionMonitoring";
+
+/**
+ * author Klaus Neumann
+ * author Tim Schuermann  <tschuerm@techfak.uni-bielefeld.de>
+ */
+message ConditionMonitoring {
+
+	/**
+	 * Contains the ID of the specific RSB-Package
+	 */
+    required int32 monitor_id = 1;	
+	
+	/**
+	 * Contains the RFID-ID of the WT
+	 */
+	required bytes rfid_id = 2;
+	
+	/**
+	 * Contains the Time of the Package creation
+	 */
+	required int32 time = 3;
+	
+	/**
+	 * Last active State from the Fleximon Workflow
+	 * Example: "Stopper 4"
+	 */
+	required string state_identifier = 4;
+	
+	/**
+	 * Wether the complete workflow was successful until this point or not
+	 */
+	required bool complete_workflow_fine = 5;
+	
+	/**
+	 * Confidence of the Boolean above
+	 */
+	required float complete_workflow_fine_confidence = 6;
+	
+	/**
+	 * Wehter the last workstate was successful or not
+	 */
+	required bool last_workstate_fine = 7;
+	
+	/**
+	 *  Confidence of the Boolean above
+	 */
+	required float last_workstate_fine_confidence = 8;
+
+}
