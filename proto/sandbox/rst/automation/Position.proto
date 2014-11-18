@@ -9,6 +9,6 @@ option java_outer_classname = "PositionType";
 message Position {
 
     required float position_work = 1;
-    required float StandartSpeed = 2;
+    required float StandardSpeed = 2;
 
 }
