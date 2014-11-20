@@ -9,44 +9,33 @@ option java_outer_classname = "ConditionMonitoring";
 message CMonitoring {
 
 	/**
-	 * Contains the ID of the specific RSB-Package
-	 */
-    required int32 monitor_id = 1;	
-	
-	/**
 	 * Contains the RFID-ID of the WT
 	 */
-	required bytes rfid_id = 2;
+	required bytes rfid_id = 1;
 	
 	/**
 	 * Contains the Time of the Package creation
 	 */
-	required int32 time = 3;
-	
-	/**
-	 * Last active State from the Fleximon Workflow
-	 * Example: "Stopper 4"
-	 */
-	required string state_identifier = 4;
+	required int32 time = 2;
 	
 	/**
 	 * Wether the complete workflow was successful until this point or not
 	 */
-	required bool complete_workflow_fine = 5;
+	required bool complete_workflow_fine = 3;
 	
 	/**
 	 * Confidence of the Boolean above
 	 */
-	required float complete_workflow_fine_confidence = 6;
-	
-	/**
-	 * Wehter the last workstate was successful or not
-	 */
-	required bool last_workstate_fine = 7;
+	required float complete_workflow_fine_confidence = 4;
 	
 	/**
 	 *  Confidence of the Boolean above
 	 */
-	required float last_workstate_fine_confidence = 8;
+	repeated CustomHashMap ConfidenceMap = 5;
+}
 
+message CustomHashMap {
+	required string key = 1;
+	required float ConfValue = 2;
+	required bool ConfBool = 3;
 }

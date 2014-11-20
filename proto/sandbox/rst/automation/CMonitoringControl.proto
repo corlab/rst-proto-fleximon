@@ -1,0 +1,27 @@
+package rst.automation;
+
+option java_outer_classname = "ConditionMonitoringControl";
+
+/**
+ * author Klaus Neumann
+ * author Tim Schuermann  <tschuerm@techfak.uni-bielefeld.de>
+ */
+message CMonitoringControl {
+	required ActionType Action = 1; //which action was chosen
+	optional bool Success = 2; // was the action on server side successful?
+	repeated string DataSetName = 3; // name of the data set to be processed
+}
+
+enum ActionType { // different state for controlling the condition monitor
+	StartExploitation = 0;
+	StopExploitation = 1;
+	StateRequest = 2;
+	StartRecording = 3;
+	StopRecording = 4;
+	ClearData = 5;
+	ChangeDataName = 6;
+	WriteData = 7;
+	LoadData = 8;
+	LearnData = 9;
+	ListData = 10;
+}
