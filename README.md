@@ -24,7 +24,7 @@ mvn install:install-file -Dfile=rstsandbox-0.11.0.jar -DgroupId=rsb -DartifactId
 Pre-built packages for this repository are available from CoR-Lab's CI Server:
 
 * [rst.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rst-0.11.0.jar) / [pom-stable0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-stable0.11.0.xml)
-* [rst-sandbox.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rstsandbox-0.11.0.jar) [pom-sandbox0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-sandbox0.11.0.xml)
+* [rst-sandbox.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rstsandbox-0.11.0.jar) / [pom-sandbox0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-sandbox0.11.0.xml)
 
 The upstream project is hosted at CoR-Lab's [open source server](http://code.cor-lab.org/).
 
