@@ -7,6 +7,25 @@ A collection of common and device specific data types for Robotics and Cognitive
 
 Shared type specifications are essential for achieving re-usability at the data and the component-level. Hence, the RST project aims at collecting typical data types in the context of intelligent (robotics) systems. From the IDL-based type specifications, shared libraries for Java, C++, Python and Common Lisp are build which are directly usable within RSB components.
 
+Installation and Usage with Maven
+=================================
+
+Generally, RST can be configured and build as described in the upstream project (see links below).
+
+To utilize this specific RST version from Java, it has to be deployed in a local Maven repository.
+
+To do so, issue the following commands in RST/build-directory/java:
+
+<pre>
+mvn install:install-file -Dfile=rst-0.11.0.jar -DgroupId=rsb -DartifactId=rst-fleximon -Dversion=0.11-SNAPSHOT -Dpackaging=jar
+mvn install:install-file -Dfile=rstsandbox-0.11.0.jar -DgroupId=rsb -DartifactId=rst-sandbox-fleximon -Dversion=0.11-SNAPSHOT -Dpackaging=jar
+</pre>
+
+Pre-built packages for this repository are available from CoR-Lab's CI Server:
+
+* [rst.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rst-0.11.0.jar) / [pom-stable0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-stable0.11.0.xml)
+* [rst-sandbox.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rstsandbox-0.11.0.jar) / [pom-sandbox0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-sandbox0.11.0.xml)
+
 The upstream project is hosted at CoR-Lab's [open source server](http://code.cor-lab.org/).
 
 References
