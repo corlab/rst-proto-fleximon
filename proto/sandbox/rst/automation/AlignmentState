@@ -1,0 +1,24 @@
+package rst.automation;
+
+option java_outer_classname = "AlignmentStateType";
+
+/**
+ * Represents the state of an alignment unit.
+ *
+ * @author Sebastian Wrede <swrede@techfak.uni-bielefeld.de>
+ */
+message AlignmentState {
+
+    /**
+     * The Alignment options.
+     */
+    enum Alignment {
+        CENTERED = 0;
+        RELEASED = 1;
+    }
+    
+    // @iec = LREAL
+    required Alignment position = 1;
+    
+    //required IecType     
+}
