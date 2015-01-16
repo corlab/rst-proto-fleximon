@@ -1,0 +1,17 @@
+package rst.automation;
+
+option java_outer_classname = "SeparatorCommandType";
+
+/**
+ * Represents a command to a separator unit.
+ *
+ * @author Sebastian Wrede <swrede@techfak.uni-bielefeld.de>
+ */
+message SeparatorCommand {
+
+    /**
+     * The separator lane triggered.
+     */
+    required int32 lane = 1;
+    
+}

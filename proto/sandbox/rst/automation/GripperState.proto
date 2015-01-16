@@ -1,0 +1,22 @@
+package rst.automation;
+
+option java_outer_classname = "GripperStateType";
+
+/**
+ * Represents the gripper state.
+ *
+ * @author Sebastian Wrede <swrede@techfak.uni-bielefeld.de>
+ */
+message GripperState {
+
+    /**
+     * The Gripper status options.
+     */
+    enum GripperPosition {
+        OPEN = 0;
+        CLOSED = 1;
+    }
+
+    required GripperPosition position = 1;
+    
+}

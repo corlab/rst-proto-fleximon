@@ -1,0 +1,28 @@
+package rst.automation;
+
+option java_outer_classname = "HingeFrameType";
+
+/**
+ * Represents the type of a hinge frame.
+ *
+ * @author Steve Dworschak <steve.dworschak@harting.com>
+ */
+message HingeFrame {
+
+    /**
+     * The Han hinge frame types.
+     */
+    enum HanType {
+        FRAME_6B_AB = 0;
+        FRAME_6B_ab = 1;
+        FRAME_10B_AC = 2;
+        FRAME_10B_ac = 3;
+        FRAME_16B_AD = 4;
+        FRAME_16B_ad = 5;
+        FRAME_24B_AD = 6;
+        FRAME_24B_ad = 7;
+    }
+
+    required HanType type = 1;
+    
+}
