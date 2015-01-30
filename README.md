@@ -21,7 +21,7 @@ mvn install:install-file -Dfile=rst-0.11.0.jar -DgroupId=rsb -DartifactId=rst-fl
 mvn install:install-file -Dfile=rstsandbox-0.11.0.jar -DgroupId=rsb -DartifactId=rst-sandbox-fleximon -Dversion=0.11-SNAPSHOT -Dpackaging=jar
 </pre>
 
-Pre-built packages for this repository are available from CoR-Lab's CI Server:
+Pre-built packages for this repository are available from CoR-Lab's CI Server (scm-triggered):
 
 * [rst.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rst-0.11.0.jar) / [pom-stable0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-stable0.11.0.xml)
 * [rst-sandbox.jar](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/rstsandbox-0.11.0.jar) / [pom-sandbox0.11.0.xml](https://ci.cor-lab.de/job/rst-fleximon/label=ubuntu_precise_64bit/lastSuccessfulBuild/artifact/build/java/pom-sandbox0.11.0.xml)
