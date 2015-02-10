@@ -1,0 +1,17 @@
+package rst.automation;
+
+option java_outer_classname = "MoveGripperType";
+
+/**
+ * Position-controlled movement command for an Afag gripper.
+ *
+ * @author Sebastian Wrede <swrede@techfak.uni-bielefeld.de>
+ */
+message MoveGripper {
+
+    required double pos = 1;
+    /** TODO add defaults [ default = 1 ] **/
+    optional double velocity = 2;
+    optional double acclearation = 3;
+
+}
