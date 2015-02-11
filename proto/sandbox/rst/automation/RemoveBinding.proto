@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "RemoveBindingType";
+
+/**
+ * Requests the removal of the binding between order and WT_ID.
+ */
+message RemoveBinding {
+
+	required int32 id = 1;
+}

@@ -1,0 +1,10 @@
+package rst.automation;
+
+option java_outer_classname = "RequestObjectPositionType";
+
+/**
+ * Requests positions of an object (pre, pos).
+ */
+message RequestObjectPosition {
+	required string object = 1;
+}

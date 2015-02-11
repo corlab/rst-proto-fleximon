@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "NewOrderExistsType";
+
+/**
+ * Requests if new order exists for WT_ID.
+ */
+message NewOrderExists {
+
+	required int32 id = 1;
+}

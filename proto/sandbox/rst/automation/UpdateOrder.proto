@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "UpdateOrderType";
+
+/**
+ * Requests the order to be updated.
+ */
+message UpdateOrder {
+
+	required string plugType = 1;
+}

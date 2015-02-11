@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "RequestSlotsType";
+
+/**
+ * Requests the removal of the binding between order and WT_ID.
+ */
+message RequestSlots {
+
+	required string plugType = 1;
+}

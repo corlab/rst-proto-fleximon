@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "RequestObjectLaneType";
+
+/**
+ * Requests the object lane of an object.
+ */
+message RequestObjectLane {
+
+	required string objectType = 1;
+}
