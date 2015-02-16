@@ -6,6 +6,5 @@ option java_outer_classname = "ExecuteTaskType";
  *
  */
 message ExecuteTask {
-    required string moduleScope = 1;
-    required string taskType = 2;
+    required string taskType = 1;
 }
