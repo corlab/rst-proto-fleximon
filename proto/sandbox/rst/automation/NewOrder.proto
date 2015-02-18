@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "NewOrderType";
+
+/**
+ * Request new order for WT_ID.
+ */
+message NewOrder {
+
+	required int32 id = 1;
+}
