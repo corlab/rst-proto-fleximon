@@ -7,5 +7,5 @@ option java_outer_classname = "ExecuteTaskType";
  */
 message ExecuteTask {
     required string taskType = 1;
-	optional string processParameter = 2;
+	optional string taskParameter = 2;
 }
