@@ -1,0 +1,10 @@
+package rst.automation;
+
+option java_outer_classname = "RequestStopperType";
+
+/**
+ * Requests the availibility of the stopper.
+ */
+message RequestStopper {
+
+}
