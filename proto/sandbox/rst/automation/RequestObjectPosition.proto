@@ -1,4 +1,4 @@
-import "HingeFrame.proto"
+import "HingeFrame.proto";
 package rst.automation;
 
 option java_outer_classname = "RequestObjectPositionType";
