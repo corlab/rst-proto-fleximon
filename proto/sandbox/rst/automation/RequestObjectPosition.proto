@@ -1,3 +1,4 @@
+import "HingeFrame.proto"
 package rst.automation;
 
 option java_outer_classname = "RequestObjectPositionType";
@@ -6,5 +7,5 @@ option java_outer_classname = "RequestObjectPositionType";
  * Requests positions of an object (pre, pos).
  */
 message RequestObjectPosition {
-	required string object = 1;
+	required HanType object = 1;
 }
