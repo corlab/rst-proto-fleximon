@@ -20,5 +20,6 @@ message ChangeDepot {
 		FEMALE8 = 7;
 	}
 
-    required FrameType type = 1;
+    //required FrameType type = 1;
+	required string type = 1;
 }
