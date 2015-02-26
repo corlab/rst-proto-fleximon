@@ -1,0 +1,9 @@
+package rst.automation;
+
+option java_outer_classname = "RequestPossObjectsType";
+
+/**
+ * Requests possible objects.
+ */
+message RequestPossObjects {
+}
