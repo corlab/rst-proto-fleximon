@@ -1,0 +1,11 @@
+package rst.automation;
+
+option java_outer_classname = "AcknowledgeIdType";
+
+/**
+ * Acknowledge id of wt.
+ */
+message AcknowledgeId {
+	required string antennaId = 1;
+	optional string wtId = 2;
+}
