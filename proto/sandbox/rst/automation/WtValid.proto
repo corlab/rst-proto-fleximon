@@ -1,11 +1,12 @@
 package rst.automation;
 
-option java_outer_classname = "RemoveBindingType";
+option java_outer_classname = "WtValidType";
 
 /**
- * Requests the removal of the binding between order and WT_ID.
+ * Ask if Wt is valid.
  */
-message RemoveBinding {
+message WtValid {
 
-	required int32 id = 1;
+	required string wtId = 1;
+	required string frameType = 2;
 }
