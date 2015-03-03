@@ -1,11 +1,11 @@
 package rst.automation;
 
-option java_outer_classname = "OrderAvailibleType";
+option java_outer_classname = "OrderAvailableType";
 
 /**
- * Triggered when new order is availible.
+ * Triggered when new order is available.
  */
-message OrderAvailible {
+message OrderAvailable {
 
 	required string order = 1;
 }
