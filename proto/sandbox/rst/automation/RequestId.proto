@@ -7,5 +7,4 @@ option java_outer_classname = "AcknowledgeIdType";
  */
 message AcknowledgeId {
 	required string antennaId = 1;
-	required string wtId = 2;
 }
