@@ -1,10 +1,10 @@
 package rst.automation;
 
-option java_outer_classname = "AcknowledgeIdType";
+option java_outer_classname = "RequestIdType";
 
 /**
- * Acknowledge id of wt.
+ * Request id of wt.
  */
-message AcknowledgeId {
+message RequestId {
 	required string antennaId = 1;
 }
