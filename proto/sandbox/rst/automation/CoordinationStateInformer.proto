@@ -6,7 +6,7 @@ option java_outer_classname = "CoordinationStateInformer";
  * author Tim Schuermann <tschuerm@techfak.uni-bielefeld.de>
  * Reply Object for CoordinationStateInformer
  */
-message CoordinationStateInformer {
+message CoordinationState {
 
 	//RFID of the WS
     required string rfid = 1;
