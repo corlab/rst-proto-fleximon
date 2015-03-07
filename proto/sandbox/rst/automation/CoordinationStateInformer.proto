@@ -1,0 +1,23 @@
+package rst.automation;
+
+option java_outer_classname = "CoordinationStateInformer";
+
+/**
+ * author Tim Schuermann <tschuerm@techfak.uni-bielefeld.de>
+ * Reply Object for CoordinationStateInformer
+ */
+message CoordinationStateInformer {
+
+	//RFID of the WS
+    required string rfid = 1;
+	//Name of the deployed Plan
+    required string planname = 2;
+	// DeploymentTime of the Plan
+    required string time = 3;
+	// Current State(s) of the Plan
+    repeated string state = 4;
+	// Processvariables contained in the Plan
+	repeated string processvariables = 5;
+	// Deployed Plan
+	required string plan = 6;
+}
