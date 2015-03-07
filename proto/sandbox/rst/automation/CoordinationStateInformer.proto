@@ -1,13 +1,12 @@
 package rst.automation;
 
-option java_outer_classname = "CoordinationStateInformer";
+option java_outer_classname = "CoordinationStateInformerType";
 
-/**
- * author Tim Schuermann <tschuerm@techfak.uni-bielefeld.de>
- * Reply Object for CoordinationStateInformer
- */
+    /**
+     *  author Tim Schuermann <tschuerm@techfak.uni-bielefeld.de>
+     *  Reply Object for CoordinationStateInformer
+     */
 message CoordinationStateInformer {
-
 	//RFID of the WS
     required string rfid = 1;
 	//Name of the deployed Plan
@@ -21,3 +20,4 @@ message CoordinationStateInformer {
 	// Deployed Plan
 	required string plan = 6;
 }
+
