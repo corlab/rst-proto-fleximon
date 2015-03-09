@@ -1,12 +1,12 @@
 package rst.automation;
 
-option java_outer_classname = "CoordinationStateInformerType";
+option java_outer_classname = "ExecutionStateInformerType";
 
     /**
      *  author Tim Schuermann <tschuerm@techfak.uni-bielefeld.de>
-     *  Reply Object for CoordinationStateInformer
+     *  Nested Object for ExecutionStateInformerList
      */
-message CoordinationStateInformer {
+message ExecutionStateInformer {
 	//RFID of the WS
     required string rfid = 1;
 	//Name of the deployed Plan

@@ -1,0 +1,13 @@
+package rst.automation;
+
+option java_outer_classname = "ExecutionStateInformerListType";
+import "rst/automation/ExecutionStateInformer.proto";
+    /**
+     *  author Tim Schuermann <tschuerm@techfak.uni-bielefeld.de>
+     *  Reply Object for the States of the Execution
+     */
+message ExecutionStateInformerList {
+	repeated ExecutionStateInformer stateInformation = 1;
+
+}
+
