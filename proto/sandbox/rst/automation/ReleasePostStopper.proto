@@ -1,0 +1,10 @@
+package rst.automation;
+
+option java_outer_classname = "ReleasePostStopperType";
+
+/**
+ * Release post stopper.
+ */
+message ReleasePostStopper {
+
+}

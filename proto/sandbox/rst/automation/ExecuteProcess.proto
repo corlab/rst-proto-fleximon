@@ -8,4 +8,5 @@ option java_outer_classname = "ExecuteProcessType";
 message ExecuteProcess {
     required string processType = 1;
 	optional string processParameter = 2;
+	optional bool async = 3;
 }

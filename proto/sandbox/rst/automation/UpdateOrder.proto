@@ -7,5 +7,5 @@ option java_outer_classname = "UpdateOrderType";
  */
 message UpdateOrder {
 
-	required string order = 1;
+	required string orderInfo = 1;
 }
