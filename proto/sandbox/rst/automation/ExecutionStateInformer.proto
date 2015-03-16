@@ -12,7 +12,7 @@ message ExecutionStateInformer {
 	//Name of the deployed Plan
     required string planname = 2;
 	// DeploymentTime of the Plan
-    required string time = 3;
+    optional string time = 3;
 	// Current State(s) of the Plan
     repeated string state = 4;
 	// Processvariables contained in the Plan
