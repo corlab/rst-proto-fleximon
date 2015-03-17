@@ -1,0 +1,10 @@
+package rst.automation;
+
+option java_outer_classname = "InspectType";
+
+/**
+ * Inspect message.
+ */
+message Inspect {
+
+}
