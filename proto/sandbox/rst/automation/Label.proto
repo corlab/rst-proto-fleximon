@@ -6,5 +6,6 @@ option java_outer_classname = "LabelType";
  * Label message.
  */
 message Label {
-
+	required qrCode = 1;
+	requried custCode = 2;
 }
