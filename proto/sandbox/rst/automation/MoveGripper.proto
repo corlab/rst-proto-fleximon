@@ -13,5 +13,5 @@ message MoveGripper {
     /** TODO add defaults [ default = 1 ] **/
     required double velocity = 2;
     required double acclearation = 3;
-    required double force = 4;
+    required int32 force = 4;
 }
