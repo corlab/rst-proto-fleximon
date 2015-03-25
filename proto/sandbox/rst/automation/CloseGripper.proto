@@ -11,7 +11,8 @@ message CloseGripper {
 
     required double force = 1;
     /** TODO add defaults [ default = 1 ] **/
-    optional double velocity = 2;
-    optional double acclearation = 3;
+    required double velocity = 2;
+    required double acclearation = 3;
+    required double position = 4;
 
 }
