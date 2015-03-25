@@ -9,7 +9,7 @@ option java_outer_classname = "CloseGripperType";
  */
 message CloseGripper {
 
-    required double force = 1;
+    required int32 force = 1;
     /** TODO add defaults [ default = 1 ] **/
     required double velocity = 2;
     required double acclearation = 3;
