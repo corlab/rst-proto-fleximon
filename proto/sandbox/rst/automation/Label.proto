@@ -8,4 +8,5 @@ option java_outer_classname = "LabelType";
 message Label {
 	required string qrCode = 1;
 	required string custCode = 2;
+	required string laserProgram = 3;
 }
