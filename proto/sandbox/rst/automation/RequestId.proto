@@ -7,4 +7,5 @@ option java_outer_classname = "RequestIdType";
  */
 message RequestId {
 	required string antennaId = 1;
+	required string orderId = 2;
 }
