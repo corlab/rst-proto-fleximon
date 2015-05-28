@@ -1,0 +1,19 @@
+package rst.automation;
+
+option java_outer_classname = "CartesianTargetType";
+
+/**
+ * Set cartesian target for robot movements.
+ */
+message CartesianTarget {
+	required double x = 1;
+	required double y = 2;
+	required double z = 3;
+	required double px = 4;
+	required double py = 5;
+	required double pz = 6;
+	required double velocity = 7;
+	required double acceleration = 8;
+	required double area = 9;
+	required double force = 10;
+}
